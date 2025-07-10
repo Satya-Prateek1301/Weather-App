@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    width: 50%;
+    padding: 20px;
+    min-height: 100vh;
+    border: 2px solid green;
+    margin-left: 25%;
+}
+
+header {
+    text-align: center;
+    color: purple;
+    margin-bottom: 2px;
+}
+
+.search-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    justify-content: center;
+    gap: 15px;
+    height: max-content;
+}
+
+.city-input {
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid yellow;
+    border-radius: 10px;
+    height: 80px;
+}
+
+.city-input:focus {
+    background-color: #3458db24;
+    border: 2px solid rgba(255, 255, 255, 0.637);
+}
+
+.search-btn {
+    padding: 15px 25px;
+    margin-left: 40%;
+    font-size: 1.2rem;
+    background-color: burlywood;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: cadetblue;
+}
+
+.search-btn:active {
+    transform: translateY(1px);
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: #3498db;
+    font-size: 1.1rem;
+}
+
+.error {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.weather-display {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.weather-display h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.weather-info {
+    margin-bottom: 25px;
+}
+
+.temperature {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #e67e22;
+    margin-bottom: 10px;
+} 
+
+/* ---------------- Responsive Styles ------------------ */
+
+/* Tablets and below */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px 15px;
+    }
+
+    .search-btn {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .city-input {
+        font-size: 1rem;
+        height: auto;
+    }
+
+    .temperature {
+        font-size: 2.5rem;
+    }
+
+    .weather-display h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .search-btn {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .detail-item {
+        font-size: 1rem;
+    }
+
+    .temperature {
+        font-size: 2.2rem;
+    }
+}
